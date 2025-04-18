@@ -97,7 +97,7 @@ async def send_user_details(current_user: dict = Depends(get_current_user)):
                 "verified": current_user.get("verified", False),
                 "name": current_user.get("name"),
                 "email": current_user.get("email"),
-                "age": current_user.get("age")
+                "age": current_user.get("age"),
                 "weight": current_user.get("weight"),
             }
         },
