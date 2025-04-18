@@ -99,6 +99,7 @@ async def send_user_details(current_user: dict = Depends(get_current_user)):
                 "email": current_user.get("email"),
                 "age": current_user.get("age"),
                 "weight": current_user.get("weight"),
+                "gender": current_user.get("gender"),
             }
         },
     )
