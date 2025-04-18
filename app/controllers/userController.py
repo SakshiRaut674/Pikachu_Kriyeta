@@ -17,14 +17,8 @@ class ProfileUpdateModel(BaseModel):
     age: Optional[int] = None
     weight: Optional[int] = None
     gender: Optional[str] = None
-    location: Optional[str] = None
     profile_photo: Optional[str] = None
-    education: Optional[List[Dict]] = None
-    experience: Optional[List[Dict]] = None
-    certifications: Optional[List[Dict]] = None
-    projects: Optional[List[Dict]] = None
-    skills: Optional[List[str]] = None
-    preferences: Optional[Dict] = None
+    query_message: Optional[str] = None
 
 # Helper function to make MongoDB documents JSON serializable
 def serialize_document(doc):
@@ -104,6 +98,7 @@ async def send_user_details(current_user: dict = Depends(get_current_user)):
                 "name": current_user.get("name"),
                 "email": current_user.get("email"),
                 "age": current_user.get("age")
+                "weight": current_user.get("weight"),
             }
         },
     )

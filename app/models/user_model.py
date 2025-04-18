@@ -11,14 +11,8 @@ class User(BaseModel):
     age: Optional[int] = None
     weight: Optional[int] = None
     gender: Optional[str] = None
-    location: Optional[str] = None
-    education: Optional[List[dict]] = []
-    experience: Optional[List[dict]] = []
-    certifications: Optional[List[dict]] = []
-    projects: Optional[List[dict]] = []
-    skills: Optional[List[str]] = []
-    preferences: Optional[dict] = {}
-      # Appointments
+    user_token: Optional[str] = None
+    query_message: Optional[str] = None
     active_appointments: Optional[List[str]] = []  # List of appointment IDs
 
     class Config:
